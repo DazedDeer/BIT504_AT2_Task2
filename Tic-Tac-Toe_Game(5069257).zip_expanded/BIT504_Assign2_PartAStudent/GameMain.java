@@ -36,9 +36,7 @@ public class GameMain extends JPanel implements MouseListener{
 	
 
 	/** Constructor to setup the UI and game components on the panel */
-	public GameMain() {   
-		
-		// TODO: This JPanel fires a MouseEvent on MouseClicked so add required event listener to 'this'.          
+	public GameMain() {             
 	    
 	    
 		// Setup the status bar (JLabel) to display status message       
@@ -53,12 +51,11 @@ public class GameMain extends JPanel implements MouseListener{
 		add(statusBar, BorderLayout.SOUTH);
 		// account for statusBar height in overall height
 		setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT + 30));
+		addMouseListener(this);
 		
+		//Board creation - in theory i have completed both board instance initiation and creation to dos
+		board = new Board();
 		
-		// TODO: Create a new instance of the game "Board"class. HINT check the variables above for the correct name
-
-		
-		//TODO: call the method to initialise the game board
 
 	}
 	
