@@ -65,14 +65,12 @@ public class GameMain extends JPanel implements MouseListener{
 	         public void run() {
 				//create a main window to contain the panel
 				JFrame frame = new JFrame(TITLE);
-				
-				//TODO: create the new GameMain panel and add it to the frame
-						
+				frame.add(new GameMain());
+				//TODO: ITD - create the new GameMain panel and add it to the frame
+
 				frame.setTitle(TITLE);
-				
-				//TODO: set the default close operation of the frame to exit_on_close
 		            
-				frame.setDefaultCloseOperation(1);
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.pack();             
 				frame.setLocationRelativeTo(null);
 				frame.setVisible(true);
@@ -187,7 +185,7 @@ public class GameMain extends JPanel implements MouseListener{
 			initGame();            
 		}   
 		
-		//TODO: redraw the graphics on the UI          
+		//TODO: redraw the graphics on the UI          HOW THOUGH?!
            
 	}
 		
