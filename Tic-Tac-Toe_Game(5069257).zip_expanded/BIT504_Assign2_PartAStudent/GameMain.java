@@ -68,11 +68,11 @@ public class GameMain extends JPanel implements MouseListener{
 				
 				//TODO: create the new GameMain panel and add it to the frame
 						
-				
+				frame.setTitle(TITLE);
 				
 				//TODO: set the default close operation of the frame to exit_on_close
 		            
-				
+				frame.setDefaultCloseOperation(1);
 				frame.pack();             
 				frame.setLocationRelativeTo(null);
 				frame.setVisible(true);
@@ -91,13 +91,13 @@ public class GameMain extends JPanel implements MouseListener{
 		if (currentState == GameState.Playing) {          
 			statusBar.setForeground(Color.BLACK);          
 			if (currentPlayer == Player.Cross) {   
-			
-				//TODO: use the status bar to display the message "X"'s Turn
+				statusBar.setText("X's Turn");
+				//TODO: ITD - use the status bar to display the message "X"'s Turn
 
 				
 			} else {    
-				
-				//TODO: use the status bar to display the message "O"'s Turn
+				statusBar.setText("O's Turn");
+				//TODO: ITD - use the status bar to display the message "O"'s Turn
 
 				
 			}       
