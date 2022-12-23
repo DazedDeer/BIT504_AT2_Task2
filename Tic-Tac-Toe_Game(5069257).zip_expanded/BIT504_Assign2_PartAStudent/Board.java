@@ -73,7 +73,7 @@ public class Board {
 			g.fillRoundRect(GameMain.CELL_SIZE * col - GRID_WIDHT_HALF, 0,                
 					GRID_WIDTH, GameMain.CANVAS_HEIGHT - 1,                
 					GRID_WIDTH, GRID_WIDTH);
-		}
+			}
 		
 		//Draw the cells
 		for (int row = 0; row < GameMain.ROWS; ++row) {          
