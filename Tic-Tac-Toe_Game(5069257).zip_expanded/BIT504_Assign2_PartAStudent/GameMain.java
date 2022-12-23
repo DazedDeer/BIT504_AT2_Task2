@@ -82,17 +82,15 @@ public class GameMain extends JPanel implements MouseListener{
 		//set status bar message
 		if (currentState == GameState.Playing) {          
 			statusBar.setForeground(Color.BLACK);          
-			if (currentPlayer == Player.Cross) {   
+			if (currentPlayer == Player.Cross) { 
+				// use the status bar to display the message "X's Turn"
 				statusBar.setText("X's Turn");
-				// In theory done - use the status bar to display the message "X"'s Turn
-
 				
-			} else {    
-				statusBar.setText("O's Turn");
-				// In theory done - use the status bar to display the message "O"'s Turn
-
-				
-			}       
+			} else {
+				// use the status bar to display the message "O's Turn"
+				statusBar.setText("O's Turn");	
+			} 
+			
 			} else if (currentState == GameState.Draw) {          
 				statusBar.setForeground(Color.RED);          
 				statusBar.setText("It's a Draw! Click to play again.");       
@@ -106,7 +104,7 @@ public class GameMain extends JPanel implements MouseListener{
 		}
 		
 	
-	  /** Initialise the game-board contents and the current status of GameState and Player) */
+	  /** Initialize the game-board contents and the current status of GameState and Player) */
 		public void initGame() {
 			for (int row = 0; row < ROWS; ++row) {          
 				for (int col = 0; col < COLS; ++col) {  
