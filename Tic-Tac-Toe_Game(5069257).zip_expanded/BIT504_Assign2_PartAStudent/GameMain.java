@@ -39,7 +39,7 @@ public class GameMain extends JPanel implements MouseListener{
 	public GameMain() {             
 	    
 	    
-		// Setup the status bar (JLabel) to display status message       
+		// Setup the status bar (JLabel) to display status messages       
 		statusBar = new JLabel("Click anywhere to start");       
 		statusBar.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 14));       
 		statusBar.setBorder(BorderFactory.createEmptyBorder(2, 5, 4, 5));       
@@ -52,12 +52,8 @@ public class GameMain extends JPanel implements MouseListener{
 		// account for statusBar height in overall height
 		setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT + 30));
 		addMouseListener(this);
+		// create the game board
 		board = new Board();
-
-		//Board creation - in theory i have hopefully done this right
-
-		
-
 	}
 	
 	public static void main(String[] args) {
@@ -66,9 +62,8 @@ public class GameMain extends JPanel implements MouseListener{
 	         public void run() {
 				//create a main window to contain the panel
 				JFrame frame = new JFrame(TITLE);
+				// create the new GameMain panel and add it to the frame
 				frame.setContentPane(new GameMain());
-
-				//TODO: In theory done - create the new GameMain panel and add it to the frame
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.pack();             
 				frame.setLocationRelativeTo(null);
@@ -78,7 +73,7 @@ public class GameMain extends JPanel implements MouseListener{
 	}
 	/** Custom painting codes on this JPanel */
 	public void paintComponent(Graphics g) {
-		//fill background and set colour to white
+		//fill background and set color to white
 		super.paintComponent(g);
 		setBackground(Color.WHITE);
 		//ask the game board to paint itself
