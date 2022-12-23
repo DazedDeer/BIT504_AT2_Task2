@@ -12,9 +12,9 @@ public class Board {
 	/** Constructor to create the game board */
 	public Board() {
 		
-	 // In theory done - initialise the cells array using ROWS and COLS constants 
+	 // initialize the cells array using ROWS and COLS constants 
 		cells = new Cell[GameMain.ROWS][GameMain.COLS]; 
-		
+		// Create the cells objects for the grid
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			for (int col = 0; col < GameMain.COLS; ++col) {
 				cells[row][col] = new Cell(row, col); 
@@ -22,8 +22,8 @@ public class Board {
 		}
 	}
 	
-//Lol no idea if the code below works
-	 /** Return true if it is a draw (i.e., no more EMPTY cells) */ 
+
+    /** Return true if it is a draw (i.e., no more EMPTY cells) */ 
 	public boolean isDraw() {
 		// nested loop to check each cell
 		for (int row = 0; row < GameMain.ROWS; ++row) {
