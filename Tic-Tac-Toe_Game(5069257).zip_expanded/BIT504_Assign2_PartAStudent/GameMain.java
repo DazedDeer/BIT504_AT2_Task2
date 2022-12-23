@@ -104,7 +104,7 @@ public class GameMain extends JPanel implements MouseListener{
 		}
 		
 	
-	  /** Initialize the game-board contents and the current status of GameState and Player) */
+	  /** Initialize the game board contents and the current status of GameState and Player) */
 		public void initGame() {
 			for (int row = 0; row < ROWS; ++row) {          
 				for (int col = 0; col < COLS; ++col) {  
