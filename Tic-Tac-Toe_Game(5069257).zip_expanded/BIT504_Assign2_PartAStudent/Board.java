@@ -12,18 +12,18 @@ public class Board {
 	/** Constructor to create the game board */
 	public Board() {
 		
-	 //TODO: initialise the cells array using ROWS and COLS constants 
-		//Doen't it already do that...?
-		
+	 // initialize the cells array using ROWS and COLS constants 
+		cells = new Cell[GameMain.ROWS][GameMain.COLS]; 
+		// Create the cells objects for the grid
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			for (int col = 0; col < GameMain.COLS; ++col) {
-				cells[row][col] = new Cell(row, col);
+				cells[row][col] = new Cell(row, col); 
 			}
 		}
 	}
 	
-//Lol no idea if the code below works
-	 /** Return true if it is a draw (i.e., no more EMPTY cells) */ 
+
+    /** Return true if it is a draw (i.e., no more EMPTY cells) */ 
 	public boolean isDraw() {
 		// nested loop to check each cell
 		for (int row = 0; row < GameMain.ROWS; ++row) {
@@ -73,7 +73,7 @@ public class Board {
 			g.fillRoundRect(GameMain.CELL_SIZE * col - GRID_WIDHT_HALF, 0,                
 					GRID_WIDTH, GameMain.CANVAS_HEIGHT - 1,                
 					GRID_WIDTH, GRID_WIDTH);
-		}
+			}
 		
 		//Draw the cells
 		for (int row = 0; row < GameMain.ROWS; ++row) {          

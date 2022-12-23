@@ -16,7 +16,7 @@ public class Cell {
 		this.row = row;
 		this.col = col;
 		// sets the content of the cell to empty
-		clear();
+	
 		 
 	}
 	
