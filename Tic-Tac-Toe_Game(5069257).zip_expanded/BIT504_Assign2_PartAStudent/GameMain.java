@@ -28,7 +28,7 @@ public class GameMain extends JPanel implements MouseListener{
 	 	 
 	// the game state enumerator
 	private GameState currentState; 
-	
+	int pos = 100;
 	// the current player
 	private Player currentPlayer; 
 	// for displaying game status message
@@ -40,7 +40,7 @@ public class GameMain extends JPanel implements MouseListener{
 	    
 	    
 		// Setup the status bar (JLabel) to display status message       
-		statusBar = new JLabel("         ");       
+		statusBar = new JLabel("Click anywhere to start");       
 		statusBar.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 14));       
 		statusBar.setBorder(BorderFactory.createEmptyBorder(2, 5, 4, 5));       
 		statusBar.setOpaque(true);       
@@ -52,9 +52,10 @@ public class GameMain extends JPanel implements MouseListener{
 		// account for statusBar height in overall height
 		setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT + 30));
 		addMouseListener(this);
-		
-		//Board creation - in theory i have completed both board instance initiation and creation to dos
 		board = new Board();
+
+		//Board creation - in theory i have hopefully done this right
+
 		
 
 	}
@@ -65,11 +66,9 @@ public class GameMain extends JPanel implements MouseListener{
 	         public void run() {
 				//create a main window to contain the panel
 				JFrame frame = new JFrame(TITLE);
-				frame.add(new GameMain());
-				//TODO: ITD - create the new GameMain panel and add it to the frame
+				frame.setContentPane(new GameMain());
 
-				frame.setTitle(TITLE);
-		            
+				//TODO: In theory done - create the new GameMain panel and add it to the frame
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.pack();             
 				frame.setLocationRelativeTo(null);
@@ -90,12 +89,12 @@ public class GameMain extends JPanel implements MouseListener{
 			statusBar.setForeground(Color.BLACK);          
 			if (currentPlayer == Player.Cross) {   
 				statusBar.setText("X's Turn");
-				//TODO: ITD - use the status bar to display the message "X"'s Turn
+				// In theory done - use the status bar to display the message "X"'s Turn
 
 				
 			} else {    
 				statusBar.setText("O's Turn");
-				//TODO: ITD - use the status bar to display the message "O"'s Turn
+				// In theory done - use the status bar to display the message "O"'s Turn
 
 				
 			}       
@@ -183,10 +182,9 @@ public class GameMain extends JPanel implements MouseListener{
 		} else {        
 			// game over and restart              
 			initGame();            
-		}   
-		
-		//TODO: redraw the graphics on the UI          HOW THOUGH?!
-           
+		}  
+		// redraw the graphics on the UI
+		repaint();
 	}
 		
 	
